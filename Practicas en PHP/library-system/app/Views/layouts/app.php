@@ -14,6 +14,10 @@
 
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url('css/adminlte.min.css') ?>" />
+
+    <!-- jsGrid -->
+    <link rel="stylesheet" href="<?= base_url('css/plugins/jsgrid/jsgrid.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/plugins/jsgrid/jsgrid-theme.min.css') ?>">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -138,6 +142,19 @@
 
     <!-- AdminLTE App -->
     <script src="<?= base_url('js/adminlte.min.js') ?>"></script>
+
+    <!-- jsGrid -->
+    <script src="<?= base_url('js/plugins/jsgrid/demos/db.js') ?>"></script>
+    <script src="<?= base_url('js/plugins/jsgrid/jsgrid.min.js') ?>"></script>
+
+    <!-- jquery-validation -->
+    <script src="<?= base_url('js/plugins/jquery-validation/jquery.validate.min.js') ?>"></script>
+    <script src="<?= base_url('js/plugins/jquery-validation/additional-methods.min.js') ?>"></script>
+
+    <!-- custom-script -->
+    <script src="<?= base_url('js/app.js') ?>"></script>
+
+    <?= $this->renderSection('scripts') ?>
 </body>
 
 </html>
