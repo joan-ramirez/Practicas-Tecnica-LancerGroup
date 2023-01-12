@@ -1,0 +1,119 @@
+CRITICAL - 2023-01-12 00:13:59 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:08 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:09 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:10 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:10 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:10 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:10 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:18 --> Invalid file: "author.index"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('author.index')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author.index', [], true)
+ 3 APPPATH\Controllers\Author.php(19): view('author.index')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:14:30 --> Invalid file: "author.index"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('author.index')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author.index', [], true)
+ 3 APPPATH\Controllers\Author.php(19): view('author.index')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:29:58 --> Invalid file: "Views\layouts\layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Views\\layouts\\layout.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Views\\layouts\\layout', [], true)
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 4 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:30:17 --> Invalid file: "layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 4 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:34:04 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 00:34:08 --> Invalid file: "book_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('book_view.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book_view', [], true)
+ 3 APPPATH\Controllers\Book.php(19): view('book_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
