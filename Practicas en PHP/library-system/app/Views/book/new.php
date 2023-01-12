@@ -13,7 +13,7 @@
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                         <li class="breadcrumb-item"><a href="#">Libros</a></li>
-                        <li class="breadcrumb-item active">crear</li>
+                        <li class="breadcrumb-item active">Crear nuevo</li>
                     </ol>
                 </div>
             </div>
@@ -29,15 +29,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Crear nuevo libro
+                                Crear libro
                             </h3>
                         </div>
                         <!-- /.card-header -->
 
-                      
-                        <form action="" method="post">
-
-                        </form>
+                        <h1>Crear nuevo libro</h1>
 
                         <!-- /.card-body -->
                     </div>

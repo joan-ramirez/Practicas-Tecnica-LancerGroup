@@ -7,13 +7,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Tutores</h1>
+                    <h1>Autores</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                         <li class="breadcrumb-item"><a href="#">Autores</a></li>
-                        <li class="breadcrumb-item active">crear</li>
+                        <li class="breadcrumb-item active">Crear nuevo</li>
                     </ol>
                 </div>
             </div>
@@ -29,15 +29,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Crear nuevo autor
+                                Crear autor
                             </h3>
                         </div>
                         <!-- /.card-header -->
 
-
-                        <form action="" method="post">
-
-                        </form>
+                        <h1>crear un autor</h1>
 
                         <!-- /.card-body -->
                     </div>

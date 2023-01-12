@@ -27,9 +27,18 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">
-                                Listado de libros
-                            </h3>
+                            <div class="row ">
+                                <div class="col-sm-6 d-flex align-items-center">
+                                    <h3 class="card-title">
+                                        Listado de libros
+                                    </h3>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="float-sm-right">
+                                        <a href="<?= base_url('books/new') ?>" class="btn btn-primary">Crear</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- /.card-header -->
 

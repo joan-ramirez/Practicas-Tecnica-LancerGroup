@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Tutores</h1>
+                    <h1>Inicio</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -26,14 +26,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                DataTable with minimal features & hover style
-                            </h3>
-                        </div>
+                     
                         <!-- /.card-header -->
 
-                        <h1>Inicio</h1>
+                        <h1>Area de result</h1>
 
                         <!-- /.card-body -->
                     </div>

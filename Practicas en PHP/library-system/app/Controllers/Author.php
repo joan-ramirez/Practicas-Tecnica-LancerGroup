@@ -26,7 +26,7 @@ class Author extends BaseController
 
     public function new()
     {
-        //
+        return view('author/new');
     }
 
     public function edit()
