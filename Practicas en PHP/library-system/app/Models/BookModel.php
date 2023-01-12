@@ -14,7 +14,7 @@ class BookModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'edition', 'author_id', 'created_at', 'updated_at',];
+    protected $allowedFields    = ['title', 'edition', 'author_id', 'created_at', 'updated_at'];
 
     // Dates
     protected $useTimestamps = false;

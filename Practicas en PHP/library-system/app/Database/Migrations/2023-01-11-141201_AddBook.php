@@ -18,6 +18,7 @@ class AddBook extends Migration
             'title' => [
                 'type'          => 'VARCHAR',
                 'constraint'    => '250',
+                'unsigned'       => true,
             ],
             'edition' => [
                 'type'          => 'TEXT',

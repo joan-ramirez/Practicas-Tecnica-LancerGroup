@@ -40,11 +40,31 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /.card-header -->
 
-                        <h1>Books</h1>
 
-                        <!-- /.card-body -->
+                        <table class="table table-bordered" id="authors-list">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if ($books) : ?>
+                                    <?php foreach ($books as $book) : ?>
+                                        <tr>
+                                            <td><?php echo $book['id']; ?></td>
+                                            <td>
+                                                <button class="btn btn-primary">Eliminar</button>
+                                                <button class="btn-primary">Actualizar</button>
+                                                <button class="btn-primary">Detalles</button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
                 <!-- /.col -->
@@ -55,4 +75,15 @@
     </section>
     <!-- /.content -->
 </div>
+<?= $this->endSection() ?>
+
+
+<?= $this->section('scripts') ?>
+
+<script>
+    $(document).ready(function() {
+        $('#authors-list').DataTable();
+    });
+</script>
+
 <?= $this->endSection() ?>

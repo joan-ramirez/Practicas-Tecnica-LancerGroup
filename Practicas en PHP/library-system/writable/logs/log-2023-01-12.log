@@ -988,3 +988,76 @@ in APPPATH\Views\layouts\app.php on line 97.
  8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
  9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:40:36 --> Undefined array key "email"
+in APPPATH\Views\author\index.php on line 58.
+ 1 APPPATH\Views\author\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Views\\author\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 5 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:40:48 --> Undefined variable $data
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:40:59 --> Undefined variable $authors
+in APPPATH\Views\author\index.php on line 53.
+ 1 APPPATH\Views\author\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authors', 'APPPATH\\Views\\author\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 5 APPPATH\Controllers\Author.php(19): view('author/index', [])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:41:03 --> Undefined array key "email"
+in APPPATH\Views\author\index.php on line 58.
+ 1 APPPATH\Views\author\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Views\\author\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 5 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:41:32 --> Undefined array key "email"
+in APPPATH\Views\author\index.php on line 58.
+ 1 APPPATH\Views\author\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Views\\author\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 5 APPPATH\Controllers\Author.php(20): view('author/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:42:49 --> Undefined array key "username"
+in APPPATH\Views\author\index.php on line 57.
+ 1 APPPATH\Views\author\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Views\\author\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 5 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:46:37 --> Undefined variable $authors
+in APPPATH\Views\book\index.php on line 53.
+ 1 APPPATH\Views\book\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authors', 'APPPATH\\Views\\book\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/index', [], true)
+ 5 APPPATH\Controllers\Book.php(19): view('book/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

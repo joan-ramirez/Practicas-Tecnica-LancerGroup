@@ -14,7 +14,7 @@ class AuthorModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'edition', 'author_id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $allowedFields    = ['name', 'surname', 'country_id', 'created_at', 'updated_at', 'deleted_at'];
 
     // Dates
     protected $useTimestamps = false;

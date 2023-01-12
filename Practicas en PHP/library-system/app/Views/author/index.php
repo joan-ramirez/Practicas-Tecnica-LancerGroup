@@ -41,11 +41,32 @@
                             </div>
                         </div>
 
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <div id="listAuthors"></div>
-                        </div>
-                        <!-- /.card-body -->
+                        <table class="table table-bordered" id="authors-list">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if ($authors) : ?>
+                                    <?php foreach ($authors as $author) : ?>
+                                        <tr>
+                                            <td><?php echo $author['id']; ?></td>
+                                            <td><?php echo $author['name']; ?></td>
+                                            <td><?php echo $author['surname']; ?></td>
+                                            <td>
+                                                <button class="btn btn-primary">Eliminar</button>
+                                                <button class="btn-primary">Actualizar</button>
+                                                <button class="btn-primary">Detalles</button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
 
                     </div>
                 </div>
@@ -58,53 +79,13 @@
     <!-- /.content -->
 </div>
 
-
-
 <?= $this->endSection() ?>
-
 
 <?= $this->section('scripts') ?>
 
 <script>
-    $(function() {
-        $("#listAuthors").jsGrid({
-            height: "100%",
-            width: "100%",
-
-            sorting: true,
-            paging: true,
-
-            data: db.clients,
-
-            fields: [{
-                    name: "Name",
-                    type: "text",
-                    width: 150
-                },
-                {
-                    name: "Age",
-                    type: "number",
-                    width: 50
-                },
-                {
-                    name: "Address",
-                    type: "text",
-                    width: 200
-                },
-                {
-                    name: "Country",
-                    type: "select",
-                    items: db.countries,
-                    valueField: "Id",
-                    textField: "Name"
-                },
-                {
-                    name: "Married",
-                    type: "checkbox",
-                    title: "Is Married"
-                }
-            ]
-        });
+    $(document).ready(function() {
+        $('#authors-list').DataTable();
     });
 </script>
 
