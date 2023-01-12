@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/plugins/all.min.css" />
+    <link rel="stylesheet" href="../css/plugins/all.min.css" />
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="css/adminlte.min.css" />
+    <link rel="stylesheet" href="../css/adminlte.min.css" />
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -89,14 +89,14 @@
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
-                                    <a href="../tables/simple.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                    <a href="../tables/simple.html" class="nav-link  <?= (current_url() == base_url('authors')) ? 'active' : '' ?>"">
+                                        <i class=" far fa-circle nav-icon"></i>
                                         <p>Tutores</p>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="../tables/data.html" class="nav-link active">
+                                    <a href="../tables/data.html" class="nav-link <?= (current_url() == base_url('books')) ? 'active' : '' ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Libros</p>
                                     </a>
@@ -131,13 +131,13 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="js/plugins/jquery.min.js"></script>
+    <script src="../js/plugins/jquery.min.js"></script>
 
     <!-- Bootstrap 4 -->
-    <script src="js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="../js/plugins/bootstrap.bundle.min.js"></script>
 
     <!-- AdminLTE App -->
-    <script src="js/adminlte.min.js"></script>
+    <script src="../js/adminlte.min.js"></script>
 </body>
 
 </html>

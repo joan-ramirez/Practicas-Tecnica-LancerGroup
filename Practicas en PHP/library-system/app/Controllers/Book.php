@@ -19,12 +19,12 @@ class Book extends BaseController
         return view('book/index', $data);
     }
 
-    public function create()
+    public function new()
     {
-        return view('add_book');
+        return view('book/new');
     }
 
-    public function new()
+    public function create()
     {
         $data = [
             'name' => $this->request->getVar('name'),

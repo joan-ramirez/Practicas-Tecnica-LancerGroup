@@ -11,8 +11,9 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Tutores</li>
+                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="#">Autores</a></li>
+                        <li class="breadcrumb-item active">crear</li>
                     </ol>
                 </div>
             </div>
@@ -28,12 +29,15 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                DataTable with minimal features & hover style
+                                Crear nuevo autor
                             </h3>
                         </div>
                         <!-- /.card-header -->
 
-                        <h1>CREATE</h1>
+
+                        <form action="" method="post">
+
+                        </form>
 
                         <!-- /.card-body -->
                     </div>
