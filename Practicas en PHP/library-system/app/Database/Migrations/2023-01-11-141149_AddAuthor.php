@@ -46,7 +46,7 @@ class AddAuthor extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('country_id', 'countries', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('country_id', 'countries', 'id');
         $this->forge->createTable('authors');
     }
 
