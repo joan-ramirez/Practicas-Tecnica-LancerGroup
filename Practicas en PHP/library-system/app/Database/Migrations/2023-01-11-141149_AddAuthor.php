@@ -17,11 +17,11 @@ class AddAuthor extends Migration
             ],
             'name' => [
                 'type'          => 'VARCHAR',
-                'constraint'    => '100',
+                'constraint'    => 100,
             ],
             'surname' => [
                 'type'          => 'VARCHAR',
-                'constraint'    => '100',
+                'constraint'    => 100,
             ],
             'country_id' => [
                 'type'           => 'INT',

@@ -27,11 +27,12 @@ class Book extends BaseController
     public function create()
     {
         $data = [
-            'name' => $this->request->getVar('name'),
-            'email'  => $this->request->getVar('email')
+            'title' => $this->request->getVar('title'),
+            'edition'  => $this->request->getVar('edition')
         ];
 
         $this->model->insert($data);
+
         return $this->response->redirect(site_url('/books'));
     }
 

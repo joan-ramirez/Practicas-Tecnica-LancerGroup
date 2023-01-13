@@ -48,7 +48,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link p-3">
+            <a href="/" class="brand-link p-3">
                 <span class="brand-text font-weight-light">Library System</span>
             </a>
 

@@ -1061,3 +1061,902 @@ in APPPATH\Views\book\index.php on line 53.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-12 22:30:34 --> mysqli_sql_exception: Column 'country_id' cannot be null in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `au...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `au...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `au...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `au...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(733): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(35): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->create()
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-12 22:30:34 --> Column 'country_id' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `authors` (`name`, `surname`, `country_id`, `created_at`, `updated_at`) VALUES (:name:, :surname:, :country_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(733): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Author.php(35): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-12 22:30:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`library_system`.`authors`, CONSTRAINT `authors_country_id_foreign` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `au...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `au...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `au...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `au...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(733): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(35): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->create()
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-12 22:30:50 --> Cannot add or update a child row: a foreign key constraint fails (`library_system`.`authors`, CONSTRAINT `authors_country_id_foreign` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `authors` (`name`, `surname`, `created_at`, `updated_at`) VALUES (:name:, :surname:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(733): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Author.php(35): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-12 22:31:01 --> mysqli_sql_exception: Column 'country_id' cannot be null in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `au...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `au...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `au...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `au...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(733): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(35): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->create()
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-12 22:31:01 --> Column 'country_id' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `authors` (`name`, `surname`, `country_id`, `created_at`, `updated_at`) VALUES (:name:, :surname:, :country_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(733): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Author.php(35): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:05:53 --> Attempt to read property "usuario" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "usuario" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:05:54 --> Attempt to read property "usuario" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "usuario" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:05:59 --> Non-static method CodeIgniter\BaseModel::find() cannot be called statically
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:06:25 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:06:30 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:06:31 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:01 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:02 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:02 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:03 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:03 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:11 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:12 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:12 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:18 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:18 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:18 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:19 --> Call to a member function with() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:07:36 --> Call to a member function get() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:27 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:28 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:28 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:28 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:28 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:29 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:29 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:29 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:29 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:30 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:30 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:30 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:08:30 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:10:24 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:10:25 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:10:31 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:10:37 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:11:09 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:41 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:42 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:42 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:42 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:42 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:43 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:43 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:43 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:58 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:59 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:13:59 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:00 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:00 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:00 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:20 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:27 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:28 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:49 --> Attempt to read property "country" on array
+in APPPATH\Views\author\index.php on line 57.
+ 1 APPPATH\Views\author\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Views\\author\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 5 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:56 --> Call to a member function country() on array
+in APPPATH\Views\author\index.php on line 57.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 4 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:14:57 --> Call to a member function country() on array
+in APPPATH\Views\author\index.php on line 57.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/index', [], true)
+ 4 APPPATH\Controllers\Author.php(19): view('author/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:15:06 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:22:53 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:22:54 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:00 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:04 --> Call to a member function all() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:25 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:27 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:27 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:27 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:27 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:28 --> Call to a member function country() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:31 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:42 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:43 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:43 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:43 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:44 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:44 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:44 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:23:44 --> Attempt to read property "country" on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 APPPATH\Controllers\Author.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "country" on array', 'APPPATH\\Controllers\\Author.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:25:20 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:25:41 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:25:42 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:26:53 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:31:03 --> Call to a member function getProfile() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:31:12 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:31:20 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:32:12 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:32:14 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:32:57 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:32:58 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:32:58 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:32:58 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:33:06 --> Class "App\Controllers\AuthorModel" not found
+in APPPATH\Controllers\Author.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:33:16 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:33:22 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:34:25 --> Call to a member function first() on array
+in APPPATH\Controllers\Author.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:34:32 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:34:33 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:34:39 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:35:12 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:35:35 --> Attempt to read property "id" on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:36:03 --> Call to a member function first() on array
+in APPPATH\Controllers\Author.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:36:11 --> Attempt to read property "id" on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:36:40 --> Attempt to read property "id" on string
+in APPPATH\Controllers\Author.php on line 19.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on string', 'APPPATH\\Controllers\\Author.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:37:54 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:38:58 --> Call to a member function getCountry() on null
+in APPPATH\Controllers\Author.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:12 --> Call to a member function getCountry() on string
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:20 --> Call to a member function getCountry() on string
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:21 --> Call to a member function getCountry() on string
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:21 --> Call to a member function getCountry() on string
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:21 --> Call to a member function getCountry() on string
+in APPPATH\Controllers\Author.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:30 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:39:52 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:47:25 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(18): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:47:43 --> Too few arguments to function CodeIgniter\Database\BaseConnection::query(), 0 passed in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php on line 842 and at least 1 expected
+in SYSTEMPATH\Database\BaseConnection.php on line 568.
+ 1 SYSTEMPATH\Model.php(842): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\Author.php(18): CodeIgniter\Model->__call('query', [])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:47:48 --> Too few arguments to function CodeIgniter\Database\BaseConnection::query(), 0 passed in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php on line 842 and at least 1 expected
+in SYSTEMPATH\Database\BaseConnection.php on line 568.
+ 1 SYSTEMPATH\Model.php(842): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\Author.php(18): CodeIgniter\Model->__call('query', [])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:47:53 --> Call to undefined method App\Models\AuthorModel::with
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(18): CodeIgniter\Model->__call('with', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:52:42 --> Call to undefined method App\Models\AuthorModel::hasOne
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Models\AuthorModel.php(57): CodeIgniter\Model->__call('hasOne', [...])
+ 2 APPPATH\Controllers\Author.php(19): App\Models\AuthorModel->getCountry()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:52:54 --> Call to undefined method App\Models\AuthorModel::hasOane
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Models\AuthorModel.php(57): CodeIgniter\Model->__call('hasOane', [...])
+ 2 APPPATH\Controllers\Author.php(19): App\Models\AuthorModel->getCountry()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:53:00 --> Call to a member function getCountry() on array
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:53:11 --> Call to undefined method App\Models\AuthorModel::getCountry
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Controllers\Author.php(19): CodeIgniter\Model->__call('getCountry', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:53:17 --> Call to undefined method App\Models\AuthorModel::hasOne
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Models\AuthorModel.php(57): CodeIgniter\Model->__call('hasOne', [...])
+ 2 APPPATH\Controllers\Author.php(19): App\Models\AuthorModel->getCountry()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:55:28 --> Call to undefined method stdClass::getCountry()
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:55:48 --> Call to undefined method stdClass::getCountry()
+in APPPATH\Controllers\Author.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 23:56:30 --> Call to undefined method App\Models\AuthorModel::hasOne
+in SYSTEMPATH\Model.php on line 848.
+ 1 APPPATH\Models\AuthorModel.php(57): CodeIgniter\Model->__call('hasOne', [...])
+ 2 APPPATH\Controllers\Author.php(19): App\Models\AuthorModel->getCountry()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

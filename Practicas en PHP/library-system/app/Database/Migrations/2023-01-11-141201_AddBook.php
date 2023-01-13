@@ -17,17 +17,11 @@ class AddBook extends Migration
             ],
             'title' => [
                 'type'          => 'VARCHAR',
-                'constraint'    => '250',
-                'unsigned'       => true,
+                'constraint'    => 250,
             ],
             'edition' => [
                 'type'          => 'TEXT',
                 'null'          => true,
-            ],
-            'author_id' => [
-                'type'          => 'INT',
-                'constraint'    => 5,
-                'unsigned'      => true,
             ],
             'created_at' => [
                 'type'          => 'VARCHAR',
@@ -42,7 +36,6 @@ class AddBook extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('author_id', 'authors', 'id', 'CASCADE');
         $this->forge->createTable('books');
     }
 

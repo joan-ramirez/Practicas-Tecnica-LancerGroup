@@ -714,11 +714,6 @@ class Model extends BaseModel
             }
         }
 
-        $data = array_merge($data, [
-            'created_at' => date('Y-m-d H:m:s'),
-            'updated_at' => date('Y-m-d H:m:s')
-        ]);
-
         if ($this->useAutoIncrement === false) {
             if (is_array($data) && isset($data[$this->primaryKey])) {
                 $this->tempPrimaryKeyValue = $data[$this->primaryKey];

@@ -1,34 +1,24 @@
 $(function () {
-  $.validator.setDefaults({
-    submitHandler: function () {
-      alert("Form successful submitted!");
-    },
-  });
-
   formValidation({
     rules: {
-      email: {
+      title: {
         required: true,
-        email: true,
+        minlength: 10,
       },
-      password: {
+      edition: {
         required: true,
-        minlength: 5,
-      },
-      terms: {
-        required: true,
+        minlength: 10,
       },
     },
     messages: {
-      email: {
-        required: "Please enter a email address",
-        email: "Please enter a valid email address",
+      title: {
+        required: "Por favor, introduzca un título",
+        required: "El título debe tener al menos 4 caracteres",
       },
-      password: {
-        required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long",
+      edition: {
+        required: "Por favor, introduzca un edición",
+        required: "El edición debe tener al menos 4 caracteres",
       },
-      terms: "Please accept our terms",
     },
   });
 });

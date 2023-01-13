@@ -25,9 +25,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row ">
+                    <div class="card p-2">
+                        <div class="card-header card-header  m-0 p-0 pb-3 pt-2 mb-2">
+                            <div class="row">
                                 <div class="col-sm-6 d-flex align-items-center">
                                     <h3 class="card-title">
                                         Listado de libros
@@ -40,7 +40,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <table class="table table-bordered" id="authors-list">
                             <thead>
@@ -55,9 +54,9 @@
                                         <tr>
                                             <td><?php echo $book['id']; ?></td>
                                             <td>
-                                                <button class="btn btn-primary">Eliminar</button>
-                                                <button class="btn-primary">Actualizar</button>
-                                                <button class="btn-primary">Detalles</button>
+                                                <button class="btn btn-primary">Detalles</button>
+                                                <button class="btn btn-success">Actualizar</button>
+                                                <button class="btn btn-danger">Eliminar</button>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
