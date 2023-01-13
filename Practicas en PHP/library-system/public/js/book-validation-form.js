@@ -9,6 +9,9 @@ $(function () {
         required: true,
         minlength: 10,
       },
+      'authors[]': {
+        required: true
+      },
     },
     messages: {
       title: {

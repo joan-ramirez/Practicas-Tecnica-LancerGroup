@@ -60,7 +60,7 @@
                                     <div class="form-group">
                                         <label>Selecciona los autores</label>
                                         <div class="select2-purple">
-                                            <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                                            <select class="select2" name="authors[]" multiple=data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
                                                 <?php if ($authors) : ?>
                                                     <?php foreach ($authors as $author) : ?>
                                                         <option value="<?= $author->id; ?>"><?= $author->getFullName(); ?></option>
@@ -72,7 +72,6 @@
                                     <!-- /.form-group -->
                                 </div>
                                 <!-- /.col -->
-
 
 
                             </div>
@@ -96,14 +95,12 @@
 
 <?= $this->section('scripts') ?>
 
-
 <script src="<?= base_url('js/plugins/select2.full.min.js') ?>"></script>
 
 <script src="<?= base_url('js/book-validation-form.js') ?>"></script>
 
-
 <script>
-    $(function() {
+    $(document).ready(function() {
         //Initialize Select2 Elements
         $('.select2').select2()
 
@@ -111,7 +108,6 @@
         $('.select2bs4').select2({
             theme: 'bootstrap4'
         })
-
     });
 </script>
 
