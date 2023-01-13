@@ -34,13 +34,13 @@
                         </div>
                         <!-- /.card-header -->
 
-
                         <div class="card-body">
                             <p class="card-text"><strong>Identificador:</strong> <?= $author->id; ?></p>
                             <p class="card-text"><strong>Nombre completo:</strong> <?= $author->getFullName(); ?></p>
                             <p class="card-text"><strong>Cantidad de libro:</strong> <?= count($author->books); ?></p>
 
                             <?php if ($author->books) : ?>
+
                                 <hr>
 
                                 <h3>Libros:</h3>
@@ -50,10 +50,10 @@
                                         <strong>Detalles:</strong>
                                         <li><strong>Identificador:</strong> <?= $book->id; ?></li>
                                         <li><strong>Title:</strong> <?= $book->title; ?></li>
+                                        <li><strong>Fecha de registro:</strong> <?= $book->created_at; ?></li>
                                     </div>
 
                                 <?php endforeach; ?>
-
 
                             <?php endif; ?>
 

@@ -1,0 +1,14 @@
+CRITICAL - 2023-01-13 20:45:06 --> Undefined property: App\Entities\BookEntity::$created_at
+in APPPATH\Entities\BookEntity.php on line 30.
+ 1 APPPATH\Entities\BookEntity.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Entities\\BookEntity::$created_at', 'APPPATH\\Entities\\BookEntity.php', 30)
+ 2 SYSTEMPATH\Entity\Entity.php(493): App\Entities\BookEntity->getCreatedAt()
+ 3 APPPATH\Entities\BookEntity.php(30): CodeIgniter\Entity\Entity->__get('created_at')
+ 4 APPPATH\Views\author\show.php(53): App\Entities\BookEntity->getCreatedAt()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\show.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/show', [], true)
+ 8 APPPATH\Controllers\Author.php(55): view('author/show', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->show('1')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
