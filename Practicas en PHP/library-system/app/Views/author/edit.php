@@ -11,8 +11,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="#">Autores</a></li>
+                        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url('authors/'); ?>">Autores</a></li>
                         <li class="breadcrumb-item active">Editar</li>
                     </ol>
                 </div>
@@ -34,7 +34,42 @@
                         </div>
                         <!-- /.card-header -->
 
-                        <h1>Editar un autor</h1>
+                        <form id="form" method="post" action="<?= site_url('authors') ?>">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" name="name" class="form-control" id="name" value="<?= $author->name;?>" placeholder="Escribe el nombre">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="surname">Apellido</label>
+                                    <input type="text" name="surname" class="form-control" id="surname" value="<?= $author->surname;?>" placeholder="Escribe el apellido">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="surname">país</label>
+                                    <select name="country" id="country" class="form-control">
+
+                                        <option value="<?= $author->country->getId();?>"><?= $author->country->getName();?></option>
+
+                                        <?php if ($countries) : ?>
+                                            <?php foreach ($countries as $country) : ?>
+                                                <option value="<?= $country->id; ?>">
+                                                    <?= $country->name; ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Actualizar</button>
+                            </div>
+                        </form>
 
                         <!-- /.card-body -->
                     </div>
@@ -49,3 +84,8 @@
 </div>
 <?= $this->endSection() ?>
 
+<?= $this->section('scripts') ?>
+
+<script src="<?= base_url('js/author-validation-form.js') ?>"></script>
+
+<?= $this->endSection() ?>

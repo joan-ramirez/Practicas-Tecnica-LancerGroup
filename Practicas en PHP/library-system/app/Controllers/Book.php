@@ -21,7 +21,6 @@ class Book extends BaseController
 
     public function new()
     {
-
         $data['authors'] = model('AuthorModel')->findAll();
         return view('book/new', $data);
     }
@@ -50,13 +49,16 @@ class Book extends BaseController
 
     public function show($id = null)
     {
-        $data['book'] = $this->model->where('id', $id)->first();
+
+        $data['book'] = $this->model->find($id);
         return view('book/show', $data);
     }
 
-    public function edit()
+    public function edit($id = null)
     {
-        //
+        $data['authors'] = model('AuthorModel')->findAll();
+        $data['book'] = $this->model->find($id);
+        return view('book/edit', $data);
     }
 
     public function update()

@@ -19,8 +19,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="#">Libros</a></li>
+                        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url('books/'); ?>">Libros</a></li>
                         <li class="breadcrumb-item active">Crear nuevo</li>
                     </ol>
                 </div>
@@ -52,7 +52,7 @@
 
                                 <div class="form-group">
                                     <label for="edition">Edición</label>
-                                    <input type="text" name="edition" class="form-control" id="edition" placeholder="Escribe la edición">
+                                    <textarea name="edition" id="edition" class="form-control" placeholder="Escribe la edición"></textarea>
                                 </div>
 
                                 <!-- /.col -->
@@ -60,6 +60,7 @@
                                     <label class="edition">Selecciona los autores</label>
                                     <div class="select2-purple">
                                         <select class="select2 form-control" name="authors[]" multiple=data-placeholder="Select a State" data-dropdown-css-class="select2-purple">
+
                                             <?php if ($authors) : ?>
                                                 <?php foreach ($authors as $author) : ?>
                                                     <option value="<?= $author->id; ?>"><?= $author->getFullName(); ?></option>
@@ -74,7 +75,7 @@
 
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Crear</button>
                             </div>
                         </form>
 

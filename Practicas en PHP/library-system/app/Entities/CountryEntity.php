@@ -14,4 +14,9 @@ class CountryEntity extends Entity
     {
         return $this->attributes['name'];
     }
+
+    public function getId()
+    {
+        return $this->attributes['id'];
+    }
 }

@@ -11,8 +11,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="#">Autores</a></li>
+                        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url('authors/'); ?>">Autores</a></li>
                         <li class="breadcrumb-item active">Crear nuevo</li>
                     </ol>
                 </div>
@@ -67,7 +67,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Crear</button>
                             </div>
                         </form>
 

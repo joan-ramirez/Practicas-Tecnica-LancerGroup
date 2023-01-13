@@ -11,8 +11,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="#">Libros</a></li>
+                        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url('books/'); ?>">Libros</a></li>
                         <li class="breadcrumb-item active">Mostrar</li>
                     </ol>
                 </div>
@@ -39,8 +39,8 @@
                                 <p class="card-text"><strong>Identificador:</strong> <?= $book->id; ?></p>
                                 <p class="card-text"><strong>Titulo:</strong> <?= $book->title; ?></p>
                                 <p class="card-text"><strong>Edicion:</strong> <?= $book->edition; ?></p>
-                                <p class="card-text"><strong>Fecha de publicación:</strong> <?= $book->created_at->humanise; ?></p>
-                                <p class="card-text"><strong>Cantidad de autores:</strong> <?= count($book->author); ?></p>
+                                <p class="card-text"><strong>Fecha de publicación:</strong> <?= $book->created_at; ?></p>
+                                <p class="card-text"><strong>Cantidad de autores:</strong> <?= count($book->authors); ?></p>
 
                                 <hr>
 

@@ -13,6 +13,12 @@ class Author extends BaseController
         $this->model = model('AuthorModel');
     }
 
+    protected function countries()
+    {
+        $paisModel = new \App\Models\CountryModel();
+        return $paisModel->findAll();
+    }
+
     public function index()
     {
         $data['authors'] = $this->model->findAll();
@@ -21,8 +27,7 @@ class Author extends BaseController
 
     public function new()
     {
-        $paisModel = new \App\Models\CountryModel();
-        $data['countries'] = $paisModel->findAll();
+        $data['countries'] = $this->countries();
         return view('author/new', $data);
     }
 
@@ -41,13 +46,15 @@ class Author extends BaseController
 
     public function show($id = null)
     {
-        $data['author'] = $this->model->where('id', $id)->first();
+        $data['author'] = $this->model->find($id);
         return view('author/show', $data);
     }
- 
-    public function edit()
+
+    public function edit($id = null)
     {
-        //
+        $data['countries'] = $this->countries();
+        $data['author'] = $this->model->find($id);
+        return view('author/edit', $data);
     }
 
     public function update()
