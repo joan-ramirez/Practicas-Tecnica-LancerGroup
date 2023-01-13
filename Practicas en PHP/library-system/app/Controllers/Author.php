@@ -6,13 +6,13 @@ use App\Controllers\BaseController;
 
 class Author extends BaseController
 {
-    private $entity;
     private $model;
+    private $entity;
 
     function __construct()
     {
-        $this->entity = new \App\Entities\AuthorEntity();
         $this->model = model('AuthorModel');
+        $this->entity = new \App\Entities\AuthorEntity();
     }
 
 
@@ -40,7 +40,7 @@ class Author extends BaseController
 
         $author = new $this->entity($data);
 
-        $this->model->save($data);
+        $this->model->save($author);
 
         return $this->response->redirect(site_url('/authors'));
     }
@@ -51,9 +51,10 @@ class Author extends BaseController
         //
     }
 
-    public function show()
+    public function show($id = null)
     {
-        //
+        $data['author'] = $this->model->where('id', $id)->first();
+        return view('author/show', $data);
     }
 
     public function update()

@@ -7,10 +7,12 @@ use App\Controllers\BaseController;
 class Book extends BaseController
 {
     private $model;
+    private $entity;
 
     function __construct()
     {
-        $this->model = new \App\Models\BookModel();
+        $this->model = model('BookModel');
+        $this->entity = new \App\Entities\BookEntity();
     }
 
     public function index()
@@ -28,7 +30,8 @@ class Book extends BaseController
     {
         $data = [
             'title' => $this->request->getVar('title'),
-            'edition'  => $this->request->getVar('edition')
+            'edition'  => $this->request->getVar('edition'),
+            'authors'  => $this->request->getVar('authors') ?? [],
         ];
 
         $this->model->insert($data);
@@ -41,9 +44,10 @@ class Book extends BaseController
         //
     }
 
-    public function show()
+    public function show($id = null)
     {
-        //
+        $data['book'] = $this->model->where('id', $id)->first();
+        return view('book/show', $data);
     }
 
     public function update()
@@ -52,8 +56,7 @@ class Book extends BaseController
     }
 
 
-    public function delete()
+    public function delete($id = null)
     {
-        //
     }
 }

@@ -34,7 +34,28 @@
                         </div>
                         <!-- /.card-header -->
 
-                        <h1>Mostrar un libro</h1>
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Titulo:</strong> <?php echo $book->title; ?></h5>
+                            <p class="card-text"><strong>Edicion:</strong> <?php echo $book->edition; ?></p>
+
+                            <?php if ($book->authors) : ?>
+                                <hr>
+
+                                <h3>Autores:</h3>
+
+                                <?php foreach ($book->authors as $author) : ?>
+                                    <div class="card p-3">
+                                        <strong>Detalles:</strong>
+                                        <li><strong>Nombre completo:</strong> <?= $author->getFullName(); ?></li>
+                                        <li><strong>Pais:</strong> <?= $author->country->getName(); ?></li>
+                                    </div>
+
+                                <?php endforeach; ?>
+
+
+                            <?php endif; ?>
+                        </div>
+
 
                         <!-- /.card-body -->
                     </div>

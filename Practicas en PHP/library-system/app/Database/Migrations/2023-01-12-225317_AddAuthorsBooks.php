@@ -38,7 +38,6 @@ class AddAuthorsBooks extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-
         $this->forge->createTable('authors__books');
     }
 

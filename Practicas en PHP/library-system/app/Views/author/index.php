@@ -55,14 +55,14 @@
                                 <?php if ($authors) : ?>
                                     <?php foreach ($authors as $author) : ?>
                                         <tr>
-                                            <td><?php echo $author->id; ?></td>
-                                            <td><?php echo $author->name; ?></td>
-                                            <td><?php echo $author->surname; ?></td>
-                                            <td><?php echo $author->country->getName() ?></td>
+                                            <td><?= $author->id; ?></td>
+                                            <td><?= $author->name; ?></td>
+                                            <td><?= $author->surname; ?></td>
+                                            <td><?= $author->country->getName() ?></td>
                                             <td>
-                                                <button class="btn btn-primary">Detalles</button>
-                                                <button class="btn btn-success">Actualizar</button>
-                                                <button class="btn btn-danger">Eliminar</button>
+                                                <a href="<?= base_url('show/' . $book->id); ?>" class="btn btn-primary">Detalles</a>
+                                                <a href="" class="btn btn-success">Actualizar</a>
+                                                <a href="" class="btn btn-danger">Eliminar</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

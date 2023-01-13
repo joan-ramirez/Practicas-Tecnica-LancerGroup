@@ -45,6 +45,9 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
+                                    <th>Título</th>
+                                    <th>Edición</th>
+                                    <th>Fecha de publicación</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -52,11 +55,14 @@
                                 <?php if ($books) : ?>
                                     <?php foreach ($books as $book) : ?>
                                         <tr>
-                                            <td><?php echo $book['id']; ?></td>
+                                            <td><?= $book->id; ?></td>
+                                            <td><?= $book->title; ?></td>
+                                            <td><?= $book->edition; ?></td>
+                                            <td><?= $book->created_at; ?></td>
                                             <td>
-                                                <button class="btn btn-primary">Detalles</button>
-                                                <button class="btn btn-success">Actualizar</button>
-                                                <button class="btn btn-danger">Eliminar</button>
+                                                <a href="<?= base_url('show/' . $book->id); ?>" class="btn btn-primary">Detalles</a>
+                                                <a href="" class="btn btn-success">Actualizar</a>
+                                                <a href="" class="btn btn-danger">Eliminar</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

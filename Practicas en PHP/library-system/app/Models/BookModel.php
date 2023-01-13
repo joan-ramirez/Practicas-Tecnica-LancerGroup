@@ -18,16 +18,23 @@ class BookModel extends Model
     protected $allowedFields    = ['title', 'edition', 'created_at', 'updated_at'];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    /*protected $belongsToMany = [
-        'authors' => [
-            'model' => 'AuthorModel',
-            'pivot' => 'authors__books'
-        ]
-    ];*/
+    protected $beforeInsert = [];
+    protected $afterInsert = ['addAuthors'];
+
+    public function addAuthors($data)
+    {
+        /* $this->db->transStart();
+        $this->db->query('AN SQL QUERY...');
+        $this->db->query('ANOTHER QUERY...');
+        $this->db->query('AND YET ANOTHER QUERY...');
+        $this->db->transComplete();*/
+
+        return $data;
+    }
 }

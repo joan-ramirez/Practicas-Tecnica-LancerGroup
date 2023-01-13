@@ -1956,3 +1956,801 @@ Stack trace:
 #12 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
 #13 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\spark(96): CodeIgniter\CLI\Console->run()
 #14 {main}
+ERROR - 2023-01-13 01:46:50 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:50 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:54 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:54 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:54 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:54 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:55 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:55 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:55 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:55 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:55 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:55 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:56 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:56 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:56 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:56 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 01:46:56 --> mysqli_sql_exception: Table 'library_system.authors' doesn't exist in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Author->index()
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-13 01:46:56 --> Table 'library_system.authors' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1601): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `authors`
+WHERE `authors`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Author.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-01-13 01:47:41 --> [DEPRECATED] Optional parameter $columns declared before required parameter $name is implicitly treated as a required parameter in APPPATH\Database\Seeds\Shared\Csv.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Database\\Seeds\\Shared\\Csv.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Database\\Seeds\\Shared\\Csv')
+ 4 APPPATH\Database\Seeds\CountrySeeder.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Database\\Seeds\\Shared\\Csv')
+ 5 SYSTEMPATH\Database\Seeder.php(146): App\Database\Seeds\CountrySeeder->run()
+ 6 SYSTEMPATH\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\CountrySeeder')
+ 7 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run([])
+ 8 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 9 ROOTPATH\spark(96): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-01-13 01:52:12 --> Cannot use object of type App\Entities\BookEntity as array
+in APPPATH\Views\book\index.php on line 55.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/index', [], true)
+ 4 APPPATH\Controllers\Book.php(21): view('book/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:01:49 --> Undefined variable $user
+in APPPATH\Views\book\index.php on line 65.
+ 1 APPPATH\Views\book\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\book\\index.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/index', [], true)
+ 5 APPPATH\Controllers\Book.php(21): view('book/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:05:50 --> Undefined variable $user
+in APPPATH\Views\book\index.php on line 63.
+ 1 APPPATH\Views\book\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\book\\index.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/index', [], true)
+ 5 APPPATH\Controllers\Book.php(21): view('book/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:05:51 --> Undefined variable $user
+in APPPATH\Views\book\index.php on line 63.
+ 1 APPPATH\Views\book\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\book\\index.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/index', [], true)
+ 5 APPPATH\Controllers\Book.php(21): view('book/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:05:56 --> Cannot use object of type App\Entities\BookEntity as array
+in APPPATH\Views\book\index.php on line 63.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/index', [], true)
+ 4 APPPATH\Controllers\Book.php(21): view('book/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:09:30 --> Attempt to read property "id" on null
+in APPPATH\Views\book\show.php on line 36.
+ 1 APPPATH\Views\book\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Views\\book\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:09:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\book\show.php on line 36.
+ 1 APPPATH\Views\book\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\book\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:30:50 --> Undefined variable $authors
+in APPPATH\Entities\BookEntity.php on line 24.
+ 1 APPPATH\Entities\BookEntity.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authors', 'APPPATH\\Entities\\BookEntity.php', 24)
+ 2 SYSTEMPATH\Entity\Entity.php(493): App\Entities\BookEntity->getAuthors()
+ 3 APPPATH\Views\book\show.php(44): CodeIgniter\Entity\Entity->__get('authors')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 7 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:31:04 --> Undefined variable $authors
+in APPPATH\Entities\BookEntity.php on line 24.
+ 1 APPPATH\Entities\BookEntity.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authors', 'APPPATH\\Entities\\BookEntity.php', 24)
+ 2 SYSTEMPATH\Entity\Entity.php(493): App\Entities\BookEntity->getAuthors()
+ 3 APPPATH\Views\book\show.php(44): CodeIgniter\Entity\Entity->__get('authors')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 7 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:31:27 --> Call to protected method App\Entities\BookEntity::getAuthors() from scope CodeIgniter\View\View
+in APPPATH\Views\book\show.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 4 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:31:41 --> Undefined variable $authors
+in APPPATH\Entities\BookEntity.php on line 23.
+ 1 APPPATH\Entities\BookEntity.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authors', 'APPPATH\\Entities\\BookEntity.php', 23)
+ 2 SYSTEMPATH\Entity\Entity.php(493): App\Entities\BookEntity->getAuthors()
+ 3 APPPATH\Views\book\show.php(44): CodeIgniter\Entity\Entity->__get('authors')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 7 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:33:41 --> Call to a member function getFullName() on null
+in APPPATH\Views\book\show.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 4 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:33:48 --> Undefined variable $authors
+in APPPATH\Entities\BookEntity.php on line 23.
+ 1 APPPATH\Entities\BookEntity.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authors', 'APPPATH\\Entities\\BookEntity.php', 23)
+ 2 SYSTEMPATH\Entity\Entity.php(493): App\Entities\BookEntity->getAuthors()
+ 3 APPPATH\Views\book\show.php(44): CodeIgniter\Entity\Entity->__get('authors')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 7 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:33:57 --> Attempt to read property "getFullName" on null
+in APPPATH\Views\book\show.php on line 44.
+ 1 APPPATH\Views\book\show.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "getFullName" on null', 'APPPATH\\Views\\book\\show.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:34:04 --> Call to a member function getFullName() on null
+in APPPATH\Views\book\show.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 4 APPPATH\Controllers\Book.php(51): view('book/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:52:56 --> Allowed fields must be specified for model: "App\Models\AuthorsBooksModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\AuthorsBooksModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\BookModel.php(33): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\BaseModel.php(1562): App\Models\BookModel->storeAuthors([...])
+ 6 SYSTEMPATH\BaseModel.php(792): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:53:34 --> Allowed fields must be specified for model: "App\Models\AuthorsBooksModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\AuthorsBooksModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\BookModel.php(33): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\BaseModel.php(1562): App\Models\BookModel->storeAuthors([...])
+ 6 SYSTEMPATH\BaseModel.php(792): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:54:50 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:02 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:04 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '5')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:06 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:07 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '3')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:09 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:34 --> Attempt to read property "getAuthors" on null
+in APPPATH\Views\book\show.php on line 36.
+ 1 APPPATH\Views\book\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "getAuthors" on null', 'APPPATH\\Views\\book\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:55:56 --> Call to a member function getAuthors() on null
+in APPPATH\Views\book\show.php on line 36.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 4 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '4')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:56:07 --> Attempt to read property "getAuthors" on null
+in APPPATH\Views\book\show.php on line 36.
+ 1 APPPATH\Views\book\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "getAuthors" on null', 'APPPATH\\Views\\book\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:56:09 --> Attempt to read property "getAuthors" on null
+in APPPATH\Views\book\show.php on line 36.
+ 1 APPPATH\Views\book\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "getAuthors" on null', 'APPPATH\\Views\\book\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '5')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:56:19 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '5')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:57:45 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:58:51 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 02:59:10 --> Attempt to read property "title" on null
+in APPPATH\Views\book\show.php on line 38.
+ 1 APPPATH\Views\book\show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on null', 'APPPATH\\Views\\book\\show.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 5 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('show', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:00:13 --> Call to protected method App\Entities\BookEntity::getAuthors() from scope CodeIgniter\View\View
+in APPPATH\Views\book\show.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 4 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:00:19 --> Attempt to read property "author_id" on array
+in APPPATH\Entities\BookEntity.php on line 21.
+ 1 APPPATH\Entities\BookEntity.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "author_id" on array', 'APPPATH\\Entities\\BookEntity.php', 21)
+ 2 SYSTEMPATH\Entity\Entity.php(493): App\Entities\BookEntity->getAuthors()
+ 3 APPPATH\Views\book\show.php(38): CodeIgniter\Entity\Entity->__get('authors')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\book\\show.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('book/show', [], true)
+ 7 APPPATH\Controllers\Book.php(52): view('book/show', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->show('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:09:38 --> syntax error, unexpected single-quoted string "created_at", expecting "]"
+in APPPATH\Models\BookModel.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\BookModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\BookModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\BookModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\BookModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'BookModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(818): CodeIgniter\Config\Factories::models('BookModel', [...], null)
+ 8 APPPATH\Controllers\Book.php(14): model('BookModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Book->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:09:41 --> syntax error, unexpected single-quoted string "created_at", expecting "]"
+in APPPATH\Models\BookModel.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\BookModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\BookModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\BookModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\BookModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'BookModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(818): CodeIgniter\Config\Factories::models('BookModel', [...], null)
+ 8 APPPATH\Controllers\Book.php(14): model('BookModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Book->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-13 03:09:51 --> mysqli_sql_exception: Unknown column 'authors' in 'field list' in C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bo...', 0)
+#1 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bo...')
+#2 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bo...')
+#3 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bo...', Array, false)
+#4 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\Model.php(728): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\app\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+#8 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(934): App\Controllers\Book->create()
+#9 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+#10 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-13 03:09:51 --> Unknown column 'authors' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2294): CodeIgniter\Database\BaseConnection->query('INSERT INTO `books` (`title`, `edition`, `authors`, `created_at`, `updated_at`) VALUES (:title:, :edition:, :authors:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:10:18 --> Call to a member function getVar() on null
+in APPPATH\Models\BookModel.php on line 32.
+ 1 SYSTEMPATH\BaseModel.php(1562): App\Models\BookModel->storeAuthors([...])
+ 2 SYSTEMPATH\BaseModel.php(792): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+ 3 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:10:31 --> Call to a member function getVar() on null
+in APPPATH\Models\BookModel.php on line 32.
+ 1 SYSTEMPATH\BaseModel.php(1562): App\Models\BookModel->storeAuthors([...])
+ 2 SYSTEMPATH\BaseModel.php(792): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+ 3 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:16:03 --> Attempt to read property "id" on bool
+in APPPATH\Controllers\Book.php on line 39.
+ 1 APPPATH\Controllers\Book.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on bool', 'APPPATH\\Controllers\\Book.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:16:50 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Book.php on line 41.
+ 1 APPPATH\Controllers\Book.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Controllers\\Book.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:16:56 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Book.php on line 41.
+ 1 APPPATH\Controllers\Book.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Controllers\\Book.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:17:12 --> Attempt to read property "authors" on array
+in APPPATH\Controllers\Book.php on line 41.
+ 1 APPPATH\Controllers\Book.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "authors" on array', 'APPPATH\\Controllers\\Book.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:17:21 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Book.php on line 41.
+ 1 APPPATH\Controllers\Book.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Controllers\\Book.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:20:49 --> Call to undefined method App\Models\BookModel::createBook
+in SYSTEMPATH\Model.php on line 843.
+ 1 APPPATH\Controllers\Book.php(40): CodeIgniter\Model->__call('createBook', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:20:51 --> Call to undefined method App\Models\BookModel::createBook
+in SYSTEMPATH\Model.php on line 843.
+ 1 APPPATH\Controllers\Book.php(40): CodeIgniter\Model->__call('createBook', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:20:58 --> Call to undefined method App\Models\BookModel::createBook
+in SYSTEMPATH\Model.php on line 843.
+ 1 APPPATH\Controllers\Book.php(40): CodeIgniter\Model->__call('createBook', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:21:05 --> Call to undefined method App\Models\BookModel::createBook
+in SYSTEMPATH\Model.php on line 843.
+ 1 APPPATH\Controllers\Book.php(40): CodeIgniter\Model->__call('createBook', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:21:36 --> Class name must be a valid object or a string
+in APPPATH\Controllers\Book.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:21:37 --> Class name must be a valid object or a string
+in APPPATH\Controllers\Book.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:21:46 --> Class name must be a valid object or a string
+in APPPATH\Controllers\Book.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:24:24 --> Trying to access array offset on value of type null
+in SYSTEMPATH\BaseModel.php on line 782.
+ 1 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'SYSTEMPATH\\BaseModel.php', 782)
+ 2 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 3 APPPATH\Controllers\Book.php(37): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:24:37 --> Trying to access array offset on value of type null
+in SYSTEMPATH\BaseModel.php on line 782.
+ 1 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'SYSTEMPATH\\BaseModel.php', 782)
+ 2 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 3 APPPATH\Controllers\Book.php(39): CodeIgniter\Model->insert(Object(App\Entities\BookEntity))
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 03:25:13 --> Undefined array key "data"
+in SYSTEMPATH\BaseModel.php on line 782.
+ 1 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'SYSTEMPATH\\BaseModel.php', 782)
+ 2 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->insert([...], true)
+ 3 APPPATH\Controllers\Book.php(37): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Book->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

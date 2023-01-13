@@ -16,6 +16,12 @@ class AuthorEntity extends Entity
             $contryModel = model('CountryModel');
             return $contryModel->where('id', $this->attributes['country_id'])->first();
         }
+
         return $this;
+    }
+
+    public function getFullName()
+    {
+        return $this->attributes['name'] . ' ' . $this->attributes['surname'];
     }
 }

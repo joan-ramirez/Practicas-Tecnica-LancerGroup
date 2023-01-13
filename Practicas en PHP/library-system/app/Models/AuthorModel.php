@@ -18,7 +18,7 @@ class AuthorModel extends Model
     protected $allowedFields    = ['name', 'surname', 'country_id', 'created_at', 'updated_at', 'deleted_at'];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -28,18 +28,4 @@ class AuthorModel extends Model
     {
         parent::__construct();
     }
-
-    /*protected $hasOne = [
-        'country' => [
-            'model' => 'CountryModel',
-            'primaryKey' => 'country_id'
-        ]
-    ];*/
-
-    /*protected $belongsToMany = [
-        'books' => [
-            'model' => 'BookModel',
-            'pivot' => 'authors__books'
-        ]
-    ];*/
 }
