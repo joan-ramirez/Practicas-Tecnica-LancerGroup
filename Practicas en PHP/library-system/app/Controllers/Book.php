@@ -48,15 +48,15 @@ class Book extends BaseController
         return $this->response->redirect(site_url('/books'));
     }
 
-    public function edit()
-    {
-        //
-    }
-
     public function show($id = null)
     {
         $data['book'] = $this->model->where('id', $id)->first();
         return view('book/show', $data);
+    }
+
+    public function edit()
+    {
+        //
     }
 
     public function update()

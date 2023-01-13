@@ -39,9 +39,9 @@
                                 <p class="card-text"><strong>Identificador:</strong> <?= $book->id; ?></p>
                                 <p class="card-text"><strong>Titulo:</strong> <?= $book->title; ?></p>
                                 <p class="card-text"><strong>Edicion:</strong> <?= $book->edition; ?></p>
-                                <p class="card-text"><strong>Fecha de publicación:</strong> <?= $book->created_at; ?></p>
-                                <p class="card-text"><strong>Cantidad de autores:</strong> <?= count($book->authors); ?></p>
-                              
+                                <p class="card-text"><strong>Fecha de publicación:</strong> <?= $book->created_at->humanise; ?></p>
+                                <p class="card-text"><strong>Cantidad de autores:</strong> <?= count($book->author); ?></p>
+
                                 <hr>
 
                                 <h3>Autores:</h3>

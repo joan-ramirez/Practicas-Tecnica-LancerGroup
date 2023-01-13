@@ -39,15 +39,15 @@ class Author extends BaseController
         return $this->response->redirect(site_url('/authors'));
     }
 
-    public function edit()
-    {
-        //
-    }
-
     public function show($id = null)
     {
         $data['author'] = $this->model->where('id', $id)->first();
         return view('author/show', $data);
+    }
+ 
+    public function edit()
+    {
+        //
     }
 
     public function update()
