@@ -20,7 +20,7 @@ class BookEntity extends Entity
                 $AuthorModel = model('AuthorModel');
                 $authors[] = $AuthorModel->where('id', $join['author_id'])->first();
             }
-            return $authors;
+            return $authors ?? [];
         }
         return $this;
     }

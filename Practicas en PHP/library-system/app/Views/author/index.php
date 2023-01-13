@@ -60,7 +60,7 @@
                                             <td><?= $author->surname; ?></td>
                                             <td><?= $author->country->getName() ?></td>
                                             <td>
-                                                <a href="<?= base_url('show/' . $book->id); ?>" class="btn btn-primary">Detalles</a>
+                                                <a href="<?= base_url('authors/' . $author->id); ?>" class="btn btn-primary">Detalles</a>
                                                 <a href="" class="btn btn-success">Actualizar</a>
                                                 <a href="" class="btn btn-danger">Eliminar</a>
                                             </td>
