@@ -20,7 +20,6 @@ class AuthorEntity extends Entity
         return $this;
     }
 
-
     protected function getBooks()
     {
         if (!empty($this->attributes['id'])) {

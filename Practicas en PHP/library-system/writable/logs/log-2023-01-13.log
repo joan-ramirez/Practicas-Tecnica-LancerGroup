@@ -4811,3 +4811,47 @@ in APPPATH\Models\BookModel.php on line 47.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 20:10:24 --> Undefined variable $data
+in APPPATH\Controllers\Author.php on line 40.
+ 1 APPPATH\Controllers\Author.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Author.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->new()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 20:10:28 --> Undefined variable $data
+in APPPATH\Controllers\Author.php on line 40.
+ 1 APPPATH\Controllers\Author.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Author.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->new()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-01-13 20:12:12 --> [DEPRECATED] Optional parameter $columns declared before required parameter $name is implicitly treated as a required parameter in APPPATH\Database\Seeds\Shared\Csv.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Database\\Seeds\\Shared\\Csv.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Database\\Seeds\\Shared\\Csv')
+ 4 APPPATH\Database\Seeds\CountrySeeder.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Database\\Seeds\\Shared\\Csv')
+ 5 SYSTEMPATH\Database\Seeder.php(146): App\Database\Seeds\CountrySeeder->run()
+ 6 SYSTEMPATH\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\CountrySeeder')
+ 7 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run([])
+ 8 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 9 ROOTPATH\spark(96): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-01-13 20:26:42 --> unlink(C:\laragon\www\Practicas-Tecnica-LancerGroup\Practicas en PHP\library-system\writable\debugbar/debugbar_1673641062.848751.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\laragon\\www\\Practicas-Tecnica-LancerGroup\\Practicas en PHP\\library-system\\writable\\debugbar/debugbar_1673641062.848751.json): No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('ROOTPATH\\writable\\debugbar/debugbar_1673641062.848751.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(496): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1673641601.204462', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(473): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-01-13 20:28:08 --> [DEPRECATED] Optional parameter $columns declared before required parameter $name is implicitly treated as a required parameter in APPPATH\Database\Seeds\Shared\Csv.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Database\\Seeds\\Shared\\Csv.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Database\\Seeds\\Shared\\Csv')
+ 4 APPPATH\Database\Seeds\CountrySeeder.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Database\\Seeds\\Shared\\Csv')
+ 5 SYSTEMPATH\Database\Seeder.php(146): App\Database\Seeds\CountrySeeder->run()
+ 6 SYSTEMPATH\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\CountrySeeder')
+ 7 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run([])
+ 8 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 9 ROOTPATH\spark(96): CodeIgniter\CLI\Console->run()

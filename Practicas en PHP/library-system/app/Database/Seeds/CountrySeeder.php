@@ -2,6 +2,7 @@
 
 namespace App\Database\Seeds;
 
+use App\Models\CountryModel;
 use CodeIgniter\Database\Seeder;
 use App\Database\Seeds\Shared\Csv;
 
@@ -11,7 +12,7 @@ class CountrySeeder extends Seeder
     {
         Csv::insert(
             name: 'countries.csv',
-            model: \App\Models\CountryModel::class,
+            model: CountryModel::class,
             columns: ['name', 'iso']
         );
     }

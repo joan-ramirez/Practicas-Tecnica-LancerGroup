@@ -15,7 +15,7 @@ class Author extends BaseController
 
     protected function countries()
     {
-        $paisModel = new \App\Models\CountryModel();
+        $paisModel = model('CountryModel');
         return $paisModel->findAll();
     }
 
