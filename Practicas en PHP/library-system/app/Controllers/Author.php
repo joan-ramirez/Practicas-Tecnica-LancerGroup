@@ -19,6 +19,15 @@ class Author extends BaseController
         return $paisModel->findAll();
     }
 
+    protected function request()
+    {
+        return [
+            'name' => $this->request->getVar('name'),
+            'surname'  => $this->request->getVar('surname'),
+            'country_id'  =>  $this->request->getVar('country'),
+        ];
+    }
+
     public function index()
     {
         $data['authors'] = $this->model->findAll();
@@ -33,11 +42,7 @@ class Author extends BaseController
 
     public function create()
     {
-        $data = [
-            'name' => $this->request->getVar('name'),
-            'surname'  => $this->request->getVar('surname'),
-            'country_id'  =>  $this->request->getVar('country'),
-        ];
+        $data = $this->request();
 
         $this->model->save($data);
 
@@ -57,9 +62,13 @@ class Author extends BaseController
         return view('author/edit', $data);
     }
 
-    public function update()
+    public function update($id = null)
     {
-        //
+        $data = $this->request();
+
+        $this->model->update($id, $data);
+
+        return $this->response->redirect(site_url('/authors'));
     }
 
     public function delete($id = null)

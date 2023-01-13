@@ -42,7 +42,9 @@
                         </div>
                         <!-- /.card-header -->
 
-                        <form id="form" method="post" action="<?= site_url('books') ?>">
+                        <form id="form" method="post" action="<?= site_url('books/' . $book->id) ?>">
+                            <input type="hidden" name="_method" value="PUT">
+
                             <div class="card-body">
 
                                 <div class="form-group">

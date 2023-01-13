@@ -34,23 +34,25 @@
                         </div>
                         <!-- /.card-header -->
 
-                        <form id="form" method="post" action="<?= site_url('authors') ?>">
+                        <form id="form" method="post" action="<?= site_url('authors/' . $author->id) ?>">
+                            <input type="hidden" name="_method" value="PUT">
+
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="name">Nombre</label>
-                                    <input type="text" name="name" class="form-control" id="name" value="<?= $author->name;?>" placeholder="Escribe el nombre">
+                                    <input type="text" name="name" class="form-control" id="name" value="<?= $author->name; ?>" placeholder="Escribe el nombre">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="surname">Apellido</label>
-                                    <input type="text" name="surname" class="form-control" id="surname" value="<?= $author->surname;?>" placeholder="Escribe el apellido">
+                                    <input type="text" name="surname" class="form-control" id="surname" value="<?= $author->surname; ?>" placeholder="Escribe el apellido">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="surname">país</label>
                                     <select name="country" id="country" class="form-control">
 
-                                        <option value="<?= $author->country->getId();?>"><?= $author->country->getName();?></option>
+                                        <option value="<?= $author->country->getId(); ?>"><?= $author->country->getName(); ?></option>
 
                                         <?php if ($countries) : ?>
                                             <?php foreach ($countries as $country) : ?>

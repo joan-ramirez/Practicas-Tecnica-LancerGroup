@@ -4732,3 +4732,14 @@ in APPPATH\Entities\CountryEntity.php on line 15.
  8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
  9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-13 17:22:01 --> Undefined variable $id
+in APPPATH\Views\author\edit.php on line 37.
+ 1 APPPATH\Views\author\edit.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Views\\author\\edit.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\author\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('author/edit', [], true)
+ 5 APPPATH\Controllers\Author.php(62): view('author/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Author->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
