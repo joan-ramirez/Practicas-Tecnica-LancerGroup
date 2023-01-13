@@ -1,5 +1,13 @@
 <?= $this->extend('layouts/app') ?>
 
+
+<?= $this->section('head') ?>
+<link rel="stylesheet" href="<?= base_url('css/plugins/select2-bootstrap4.min.css') ?>">
+<link rel="stylesheet" href="<?= base_url('css/plugins/select2.min.css') ?>">
+<?= $this->endSection() ?>
+
+
+
 <?= $this->section('content') ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -47,6 +55,26 @@
                                     <input type="text" name="edition" class="form-control" id="edition" placeholder="Escribe la edición">
                                 </div>
 
+                                <!-- /.col -->
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Selecciona los autores</label>
+                                        <div class="select2-purple">
+                                            <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                                                <?php if ($authors) : ?>
+                                                    <?php foreach ($authors as $author) : ?>
+                                                        <option value="<?= $author->id; ?>"><?= $author->getFullName(); ?></option>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>
+                                <!-- /.col -->
+
+
+
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -68,6 +96,23 @@
 
 <?= $this->section('scripts') ?>
 
+
+<script src="<?= base_url('js/plugins/select2.full.min.js') ?>"></script>
+
 <script src="<?= base_url('js/book-validation-form.js') ?>"></script>
+
+
+<script>
+    $(function() {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+
+    });
+</script>
 
 <?= $this->endSection() ?>

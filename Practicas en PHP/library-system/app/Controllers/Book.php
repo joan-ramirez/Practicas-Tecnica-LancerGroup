@@ -23,7 +23,9 @@ class Book extends BaseController
 
     public function new()
     {
-        return view('book/new');
+
+        $data['authors'] = model('AuthorModel')->findAll();
+        return view('book/new', $data);
     }
 
     public function create()
@@ -31,8 +33,10 @@ class Book extends BaseController
         $data = [
             'title' => $this->request->getVar('title'),
             'edition'  => $this->request->getVar('edition'),
-            'authors'  => $this->request->getVar('authors') ?? [],
+            'authors'  => $this->request->getVar('authors'),
         ];
+
+        dd($data);
 
         $this->model->insert($data);
 

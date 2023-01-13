@@ -17,6 +17,8 @@
 
     <!-- data-table -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/plugins/datatables.min.css') ?>">
+
+    <?= $this->renderSection('head') ?>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -41,7 +43,7 @@
                     </a>
                 </li>
             </ul>
-            
+
         </nav>
         <!-- /.navbar -->
 
@@ -126,7 +128,7 @@
 
     <!-- custom-script -->
     <script src="<?= base_url('js/app.js') ?>"></script>
-
+    
     <?= $this->renderSection('scripts') ?>
 </body>
 
