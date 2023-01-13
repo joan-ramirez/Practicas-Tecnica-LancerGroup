@@ -13,6 +13,15 @@ class Book extends BaseController
         $this->model = model('BookModel');
     }
 
+    protected function request()
+    {
+        return [
+            'title' => $this->request->getVar('title'),
+            'edition'  => $this->request->getVar('edition'),
+            'authors'  => $this->request->getVar('authors'),
+        ];
+    }
+
     public function index()
     {
         $data['books'] = $this->model->findAll();
@@ -27,11 +36,7 @@ class Book extends BaseController
 
     public function create()
     {
-        $data = [
-            'title' => $this->request->getVar('title'),
-            'edition'  => $this->request->getVar('edition'),
-            'authors'  => $this->request->getVar('authors'),
-        ];
+        $data = $this->request();
 
         $book = $this->model->insert($data);
 
@@ -65,7 +70,6 @@ class Book extends BaseController
     {
         //
     }
-
 
     public function delete($id = null)
     {
