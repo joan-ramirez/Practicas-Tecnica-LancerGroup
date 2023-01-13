@@ -60,11 +60,11 @@
                                             <td><?= $author->surname; ?></td>
                                             <td><?= $author->country->getName() ?></td>
                                             <td>
-                                                <a href="<?= base_url('authors/' . $author->id); ?>" class="btn btn-primary w-100 p-2 mb-2">Detalles</a>
-                                                <a href="<?= base_url('authors/' . $author->id . '/edit'); ?>" class="btn btn-success w-100 p-2 mb-2">Editar</a>
+                                                <a href="<?= base_url('authors/' . $author->id); ?>" class="btn btn-primary w-100 mb-2">Detalles</a>
+                                                <a href="<?= base_url('authors/' . $author->id . '/edit'); ?>" class="btn btn-success w-100 mb-2">Editar</a>
                                                 <form action="<?= base_url('authors/' . $author->id); ?>" method="POST">
                                                     <input type="hidden" name="_method" value="DELETE">
-                                                    <button type="submit" class="btn btn-danger w-100 p-2 mbm-2">Eliminar</button>
+                                                    <button type="submit" class="btn btn-danger w-100 mbm-2">Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

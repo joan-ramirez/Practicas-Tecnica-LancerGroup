@@ -38,23 +38,13 @@ class Book extends BaseController
     {
         $data = $this->request();
 
-        $book = $this->model->insert($data);
-
-        // Save book tutors
-        $AuthorsBooksModel = model('AuthorsBooksModel');
-
-        foreach ($data['authors'] as $author) {
-            $AuthorsBooksModel->insert(
-                ['author_id' => $author, 'book_id' => $book]
-            );
-        }
+        $this->model->transBooksTutors($data);
 
         return $this->response->redirect(site_url('/books'));
     }
 
     public function show($id = null)
     {
-
         $data['book'] = $this->model->find($id);
         return view('book/show', $data);
     }
@@ -66,9 +56,13 @@ class Book extends BaseController
         return view('book/edit', $data);
     }
 
-    public function update()
+    public function update($id = null)
     {
-        //
+        $data = $this->request();
+
+        $this->model->transBooksTutors($data, $id);
+
+        return $this->response->redirect(site_url('/books'));
     }
 
     public function delete($id = null)

@@ -24,16 +24,30 @@ class BookModel extends Model
     protected $updatedField  = 'updated_at';
 
     protected $beforeInsert = [];
-    protected $afterInsert = ['addAuthors'];
+    protected $afterInsert = [];
 
-    public function addAuthors($data)
+    // Insert or update book tutors
+    public function transBooksTutors($data, $id = null)
     {
-        /* $this->db->transStart();
-        $this->db->query('AN SQL QUERY...');
-        $this->db->query('ANOTHER QUERY...');
-        $this->db->query('AND YET ANOTHER QUERY...');
-        $this->db->transComplete();*/
+        $this->db->transStart();
 
-        return $data;
+        $authorsBooksModel = model('AuthorsBooksModel');
+
+        if ($id) {
+            foreach ($data['authors'] as $author) {
+                $authorsBooksModel->where('book_id', $id)->delete();
+            }
+            $this->update($id, $data);
+        } else {
+            $book = $this->insert($data);
+        }
+
+        foreach ($data['authors'] as $author) {
+            $authorsBooksModel->insert(
+                ['author_id' => $author, 'book_id' => $book ?? $id]
+            );
+        }
+
+        $this->db->transComplete();
     }
 }
