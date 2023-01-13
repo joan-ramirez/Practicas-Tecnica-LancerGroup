@@ -15,7 +15,7 @@ class AuthorModel extends Model
     protected $returnType       = AuthorEntity::class;
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'surname', 'country_id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $allowedFields    = ['name', 'surname', 'country_id'];
 
     // Dates
     protected $useTimestamps = true;

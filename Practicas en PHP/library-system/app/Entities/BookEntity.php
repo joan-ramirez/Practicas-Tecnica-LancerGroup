@@ -18,7 +18,7 @@ class BookEntity extends Entity
 
             foreach ($joins as $join) {
                 $AuthorModel = model('AuthorModel');
-                $authors[] = $AuthorModel->where('id', $join['author_id'])->first();
+                $authors[] = $AuthorModel->withDeleted()->find($join['author_id']);
             }
             return $authors ?? [];
         }

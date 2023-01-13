@@ -48,7 +48,7 @@
                                     <th>Name</th>
                                     <th>Surname</th>
                                     <th>pais</th>
-                                    <th>Acciones</th>
+                                    <th class="col-2">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,9 +60,12 @@
                                             <td><?= $author->surname; ?></td>
                                             <td><?= $author->country->getName() ?></td>
                                             <td>
-                                                <a href="<?= base_url('authors/' . $author->id); ?>" class="btn btn-primary">Detalles</a>
-                                                <a href="" class="btn btn-success">Actualizar</a>
-                                                <a href="" class="btn btn-danger">Eliminar</a>
+                                                <a href="<?= base_url('authors/' . $author->id); ?>" class="btn btn-primary w-100 p-2 mb-2">Detalles</a>
+                                                <a href="" class="btn btn-success w-100 p-2 mb-2">Actualizar</a>
+                                                <form action="<?= base_url('authors/' . $author->id); ?>" method="POST">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger w-100 p-2 mbm-2">Eliminar</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

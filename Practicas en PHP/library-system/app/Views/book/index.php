@@ -48,7 +48,7 @@
                                     <th>Título</th>
                                     <th>Edición</th>
                                     <th>Fecha de publicación</th>
-                                    <th>Acciones</th>
+                                    <th class="col-2">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,9 +60,12 @@
                                             <td><?= $book->edition; ?></td>
                                             <td><?= $book->created_at; ?></td>
                                             <td>
-                                                <a href="<?= base_url('books/' . $book->id); ?>" class="btn btn-primary">Detalles</a>
-                                                <a href="" class="btn btn-success">Actualizar</a>
-                                                <a href="" class="btn btn-danger">Eliminar</a>
+                                                <a href="<?= base_url('books/' . $book->id); ?>" class="btn btn-primary w-100 p-2 mb-2">Detalles</a>
+                                                <a href="" class="btn btn-success w-100 p-2 mb-2">Actualizar</a>
+                                                <form action="<?= base_url('books/' . $book->id); ?>" method="POST">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger w-100 p-2 mb-2">Eliminar</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

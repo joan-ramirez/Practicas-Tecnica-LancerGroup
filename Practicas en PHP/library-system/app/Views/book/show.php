@@ -34,11 +34,14 @@
                         </div>
                         <!-- /.card-header -->
 
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Titulo:</strong> <?php echo $book->title; ?></h5>
-                            <p class="card-text"><strong>Edicion:</strong> <?php echo $book->edition; ?></p>
-
-                            <?php if ($book->authors) : ?>
+                        <?php if ($book->authors) : ?>
+                            <div class="card-body">
+                                <p class="card-text"><strong>Identificador:</strong> <?= $book->id; ?></p>
+                                <p class="card-text"><strong>Titulo:</strong> <?= $book->title; ?></p>
+                                <p class="card-text"><strong>Edicion:</strong> <?= $book->edition; ?></p>
+                                <p class="card-text"><strong>Fecha de publicación:</strong> <?= $book->created_at; ?></p>
+                                <p class="card-text"><strong>Cantidad de autores:</strong> <?= count($book->authors); ?></p>
+                              
                                 <hr>
 
                                 <h3>Autores:</h3>
@@ -46,6 +49,7 @@
                                 <?php foreach ($book->authors as $author) : ?>
                                     <div class="card p-3">
                                         <strong>Detalles:</strong>
+                                        <li><strong>Identificador:</strong> <?= $author->id; ?></li>
                                         <li><strong>Nombre completo:</strong> <?= $author->getFullName(); ?></li>
                                         <li><strong>Pais:</strong> <?= $author->country->getName(); ?></li>
                                     </div>
@@ -53,8 +57,8 @@
                                 <?php endforeach; ?>
 
 
-                            <?php endif; ?>
-                        </div>
+                            </div>
+                        <?php endif; ?>
 
 
                         <!-- /.card-body -->

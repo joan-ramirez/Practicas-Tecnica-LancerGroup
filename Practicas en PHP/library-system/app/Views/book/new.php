@@ -56,23 +56,21 @@
                                 </div>
 
                                 <!-- /.col -->
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label>Selecciona los autores</label>
-                                        <div class="select2-purple">
-                                            <select class="select2" name="authors[]" multiple=data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
-                                                <?php if ($authors) : ?>
-                                                    <?php foreach ($authors as $author) : ?>
-                                                        <option value="<?= $author->id; ?>"><?= $author->getFullName(); ?></option>
-                                                    <?php endforeach; ?>
-                                                <?php endif; ?>
-                                            </select>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="edition">Selecciona los autores</label>
+                                    <div class="select2-purple">
+                                        <select class="select2 form-control" name="authors[]" multiple=data-placeholder="Select a State" data-dropdown-css-class="select2-purple">
+                                            <?php if ($authors) : ?>
+                                                <?php foreach ($authors as $author) : ?>
+                                                    <option value="<?= $author->id; ?>"><?= $author->getFullName(); ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        </select>
+
                                     </div>
                                     <!-- /.form-group -->
                                 </div>
                                 <!-- /.col -->
-
 
                             </div>
                             <div class="card-footer">

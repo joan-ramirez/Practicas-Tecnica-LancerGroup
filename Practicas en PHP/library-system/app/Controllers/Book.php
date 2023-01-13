@@ -7,12 +7,10 @@ use App\Controllers\BaseController;
 class Book extends BaseController
 {
     private $model;
-    private $entity;
 
     function __construct()
     {
         $this->model = model('BookModel');
-        $this->entity = new \App\Entities\BookEntity();
     }
 
     public function index()
@@ -36,9 +34,16 @@ class Book extends BaseController
             'authors'  => $this->request->getVar('authors'),
         ];
 
-        dd($data);
+        $book = $this->model->insert($data);
 
-        $this->model->insert($data);
+        // Save book tutors
+        $AuthorsBooksModel = model('AuthorsBooksModel');
+
+        foreach ($data['authors'] as $author) {
+            $AuthorsBooksModel->insert(
+                ['author_id' => $author, 'book_id' => $book]
+            );
+        }
 
         return $this->response->redirect(site_url('/books'));
     }
@@ -62,5 +67,7 @@ class Book extends BaseController
 
     public function delete($id = null)
     {
+        $this->model->where('id', $id)->delete($id);
+        return $this->response->redirect(site_url('books'));
     }
 }

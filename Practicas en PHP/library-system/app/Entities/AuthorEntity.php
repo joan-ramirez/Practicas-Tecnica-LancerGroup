@@ -20,6 +20,21 @@ class AuthorEntity extends Entity
         return $this;
     }
 
+    protected function getBooks()
+    {
+        if (!empty($this->attributes['id'])) {
+            $AuthorsBooksModel = model('AuthorsBooksModel');
+            $joins = $AuthorsBooksModel->where('author_id', $this->attributes['id'])->findAll();
+
+            foreach ($joins as $join) {
+                $AuthorModel = model('AuthorModel');
+                $authors[] = $AuthorModel->where('id', $join['book_id'])->first();
+            }
+            return $authors ?? [];
+        }
+        return $this;
+    }
+
     public function getFullName()
     {
         return $this->attributes['name'] . ' ' . $this->attributes['surname'];

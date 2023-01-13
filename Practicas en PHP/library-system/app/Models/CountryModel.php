@@ -15,12 +15,11 @@ class CountryModel extends Model
     protected $returnType       = CountryEntity::class;
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'iso', 'created_at', 'updated_at',];
+    protected $allowedFields    = ['name', 'iso'];
 
     // Dates
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
 }

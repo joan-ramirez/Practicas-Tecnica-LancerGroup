@@ -7,14 +7,11 @@ use App\Controllers\BaseController;
 class Author extends BaseController
 {
     private $model;
-    private $entity;
 
     function __construct()
     {
         $this->model = model('AuthorModel');
-        $this->entity = new \App\Entities\AuthorEntity();
     }
-
 
     public function index()
     {
@@ -29,7 +26,6 @@ class Author extends BaseController
         return view('author/new', $data);
     }
 
-
     public function create()
     {
         $data = [
@@ -38,13 +34,10 @@ class Author extends BaseController
             'country_id'  =>  $this->request->getVar('country'),
         ];
 
-        $author = new $this->entity($data);
-
-        $this->model->save($author);
+        $this->model->save($data);
 
         return $this->response->redirect(site_url('/authors'));
     }
-
 
     public function edit()
     {
@@ -62,9 +55,9 @@ class Author extends BaseController
         //
     }
 
-
     public function delete($id = null)
     {
-        //
+        $this->model->where('id', $id)->delete($id);
+        return $this->response->redirect(site_url('authors'));
     }
 }

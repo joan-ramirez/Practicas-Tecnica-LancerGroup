@@ -29,12 +29,36 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                            Mostrar autor
+                                Mostrar autor
                             </h3>
                         </div>
                         <!-- /.card-header -->
 
-                        <h1>mostrar un autor</h1>
+
+                        <div class="card-body">
+                            <p class="card-text"><strong>Identificador:</strong> <?= $author->id; ?></p>
+                            <p class="card-text"><strong>Nombre completo:</strong> <?= $author->getFullName(); ?></p>
+                            <p class="card-text"><strong>Cantidad de libro:</strong> <?= count($author->books); ?></p>
+                       
+                            <?php if ($author->books) : ?>
+                                <hr>
+
+                                <h3>Libros:</h3>
+
+                                <?php foreach ($author->books as $book) : ?>
+                                    <div class="card p-3">
+                                        <strong>Detalles:</strong>
+                                        <li><strong>Identificador:</strong> <?= $book->id; ?></li>
+                                        <li><strong>Title:</strong> <?= $book->getFullName(); ?></li>
+                                    </div>
+
+                                <?php endforeach; ?>
+
+
+                            <?php endif; ?>
+                       
+                        </div>
+
 
                         <!-- /.card-body -->
                     </div>
